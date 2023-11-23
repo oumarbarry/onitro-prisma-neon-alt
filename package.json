@@ -1,0 +1,28 @@
+{
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "prisma generate && nitropack dev",
+    "build": "prisma generate && nitropack build",
+    "preview": "node .output/server/index.mjs",
+    "postinstall": "nitropack prepare",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^0.6.0",
+    "@prisma/adapter-neon": "^5.6.0",
+    "@prisma/client": "^5.6.0",
+    "ws": "^8.14.2",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.0.0",
+    "@types/node": "^18.18.12",
+    "@types/ws": "^8.5.10",
+    "eslint": "^8.54.0",
+    "nitropack": "^2.8.0",
+    "prisma": "^5.6.0",
+    "typescript": "^5.3.2"
+  }
+}
